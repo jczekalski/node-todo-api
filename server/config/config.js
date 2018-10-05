@@ -3,7 +3,7 @@ const env = process.env.NODE_ENV || 'development';
 const db = {
   dev: 'mongodb://localhost:27017/TodoApp',
   test: 'mongodb://localhost:27017/TodoAppTest',
-  mlab: 'mongodb://<user>:<pass>@ds155674.mlab.com:55674/todoapp-nodejs'
+  mlab: 'mongodb://jncz:todoapp123@ds223253.mlab.com:23253/todo-app-api'
 };
 
 if (process.env.PORT) {
