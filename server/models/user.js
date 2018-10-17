@@ -52,6 +52,17 @@ UserSchema.methods.generateAuthToken = function () {
   });
 };
 
+UserSchema.methods.removeToken = function (token) {
+  const user = this;
+
+  return user.update({
+    //$pull = MongoDB operator used to remove all instances of X from an array
+    $pull: {
+      tokens: {token}
+    }
+  });
+};
+
 UserSchema.statics.findByToken = function (token) {
   const User = this;
   let decoded;
